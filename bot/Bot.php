@@ -1,36 +1,30 @@
 <?php
-class Bot
-{
+class Bot {
     private $name = " YAsoftware";
     private $gender = "Hombre";
-   
 
-    public function getName()
-    {
-        return $this->name;
+
+    public function getName() {
+        return $this -> name;
     }
 
-    public function getGender()
-    {
-        return $this->gender;
+    public function getGender() {
+        return $this -> gender;
     }
 
-    public function hears($message, callable $call)
-    {
+    public function hears($message, callable $call) {
         $call(new Bot);
         return $message;
     }
 
-    public function reply($response)
-    {
+    public function reply($response) {
         echo $response;
     }
 
-    public function ask($question, array $questionDictionary)
-    {
+    public function ask($question, array $questionDictionary) {
         $question = trim($question);
         foreach ($questionDictionary as $questions => $value) {
-            if ($question == $questions) {
+            if (($question == $questions) or (str_contains($questions, $question))) {
                 return $value;
             }
         }
