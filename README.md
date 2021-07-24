@@ -1,2 +1,2 @@
 # ChatBot
-Todo lo derecho estan reservados
+ © copyright 2021 Todo lo derecho estan reservados 
